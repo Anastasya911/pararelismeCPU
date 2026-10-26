@@ -23,7 +23,7 @@ class ILPHazardSimulator:
             dest = inst['dest']
             sources = [inst['src1'], inst['src2']] if inst['src2'] else [inst['src1']]
 
-            # 1. Check RAW (Read After Write): Instruksi j membaca register yang ditulis instruksi i sebelumnya
+            # 1. Check RAW (Read After Write)
             for src in sources:
                 if src in reg_table and reg_table[src]['last_writer'] is not None:
                     writer_id = reg_table[src]['last_writer']
