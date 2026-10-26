@@ -94,5 +94,6 @@ simulator.add_instruction("I4", "OR",  "R2", "R4", "R1")  # WAR: Menulis R2 yang
 
 # Jalankan Deteksi
 detected_hazards = simulator.detect_hazards()
+
 for h in detected_hazards:
     print(f"[{h['type']}] -> {h['cause']}")
